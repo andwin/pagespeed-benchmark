@@ -30,10 +30,9 @@ const run = async () => {
   const defaultRequests = 10
   const requests = options.requests || defaultRequests
 
-  console.log({ urls, requests })
+  console.log('Number of requests per url:', requests)
 
   const summary = {}
-
   // eslint-disable-next-line no-restricted-syntax
   for await (const url of urls) {
     const urlMetrics = []
