@@ -2,6 +2,7 @@ const commandLineArgs = require('command-line-args')
 
 const printUsage = require('./print_usage')
 const runLighthouse = require('./run_lighthouse')
+const metricsFromResult = require('./metrics_from_result')
 const statistics = require('./statistics')
 const printSummary = require('./print_summary')
 
@@ -49,29 +50,6 @@ const run = async () => {
   }
 
   printSummary(summary)
-}
-
-const metricsFromResult = (res) => {
-  const metrics = {}
-  metrics.score = res.lhr.categories.performance.score
-
-  const metricValues = [
-    'time-to-first-byte',
-    'first-contentful-paint',
-    'first-meaningful-paint',
-    'speed-index',
-    'interactive',
-    'first-cpu-idle',
-    'estimated-input-latency',
-    'max-potential-fid',
-    'main-thread-tasks',
-  ]
-
-  metricValues.forEach((m) => {
-    metrics[m] = res.lhr.audits[m].numericValue
-  })
-
-  return metrics
 }
 
 run()
