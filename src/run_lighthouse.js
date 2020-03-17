@@ -10,18 +10,12 @@ const runLighthouse = async (url) => {
   const res = await lighthouse(url, {
     port: new URL(browser.wsEndpoint()).port,
     output: 'json',
-    // settings: {
     onlyCategories: ['performance'],
     onlyAudits: [],
-    // },
   })
 
   browser.close()
   return res
 }
-
-// const launchPuppeteer = () => {
-//   return browser
-// }
 
 module.exports = runLighthouse
