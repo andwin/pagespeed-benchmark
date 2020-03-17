@@ -4,8 +4,10 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "pagespeed-benchmark": "node ./src/index.js",
     "test": "jest ."
+  },
+  "bin": {
+    "pagespeed-benchmark": "./cli.js"
   },
   "repository": {
     "type": "git",
