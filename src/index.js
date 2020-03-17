@@ -36,17 +36,22 @@ const run = async () => {
   const summary = {}
   // eslint-disable-next-line no-restricted-syntax
   for await (const url of urls) {
+    console.log('Processing url:', url)
     const urlMetrics = []
 
-    for (let n = 0; n < requests; n++) {
-      const res = await runLighthouse(url)
-      const metrics = metricsFromResult(res)
-      urlMetrics.push(metrics)
+    try {
+      for (let n = 0; n < requests; n++) {
+        const res = await runLighthouse(url)
+        const metrics = metricsFromResult(res)
+        urlMetrics.push(metrics)
+      }
+
+      const urlStatistics = statistics(urlMetrics)
+
+      summary[url] = urlStatistics
+    } catch (e) {
+      console.log(e.friendlyMessage || e.toString())
     }
-
-    const urlStatistics = statistics(urlMetrics)
-
-    summary[url] = urlStatistics
   }
 
   printSummary(summary)
