@@ -17,7 +17,7 @@ const run = async () => {
   try {
     options = commandLineArgs(optionDefinitions)
   } catch (e) {
-    console.log(e)
+    console.log(e.toString())
     printUsage()
     process.exit(0)
   }
