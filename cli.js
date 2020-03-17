@@ -1,10 +1,11 @@
+#!/usr/bin/env node
 const commandLineArgs = require('command-line-args')
 
-const printUsage = require('./print_usage')
-const runLighthouse = require('./run_lighthouse')
-const metricsFromResult = require('./metrics_from_result')
-const statistics = require('./statistics')
-const printSummary = require('./print_summary')
+const printUsage = require('./lib/print_usage')
+const runLighthouse = require('./lib/run_lighthouse')
+const metricsFromResult = require('./lib/metrics_from_result')
+const statistics = require('./lib/statistics')
+const printSummary = require('./lib/print_summary')
 
 const optionDefinitions = [
   { name: 'urls', type: String, multiple: true, defaultOption: true },
