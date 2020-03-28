@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "test": "jest ."
+    "test": "eslint . && jest"
   },
   "bin": {
     "pagespeed-benchmark": "./cli.js"
@@ -27,6 +27,7 @@
     "puppeteer": "^2.1.1"
   },
   "devDependencies": {
+    "@andwin/eslint-config": "0.0.4",
     "jest": "^25.1.0"
   }
 }

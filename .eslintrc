@@ -1,0 +1,6 @@
+{
+  "extends": "@andwin/eslint-config",
+  "rules": {
+    "no-console": "off"
+  }
+}
