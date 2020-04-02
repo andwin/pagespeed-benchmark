@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/andwin/pagespeed-benchmark.git"
   },
-  "keywords": ["pagespeed", "lighthouse", "benchmark", "performance"],
+  "keywords": [
+    "pagespeed",
+    "lighthouse",
+    "benchmark",
+    "performance"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -28,6 +33,6 @@
   },
   "devDependencies": {
     "@andwin/eslint-config": "0.0.5",
-    "jest": "^25.1.0"
+    "jest": "^25.2.6"
   }
 }
