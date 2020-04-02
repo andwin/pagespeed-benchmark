@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/andwin/pagespeed-benchmark.git"
   },
-  "keywords": [],
+  "keywords": ["pagespeed", "lighthouse", "benchmark", "performance"],
   "author": "",
   "license": "ISC",
   "bugs": {
