@@ -2,7 +2,7 @@
   "name": "pagespeed-benchmark",
   "version": "0.0.4",
   "description": "",
-  "main": "./src/index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "eslint . && jest"
   },

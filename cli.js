@@ -2,9 +2,7 @@
 const commandLineArgs = require('command-line-args')
 
 const printUsage = require('./lib/print_usage')
-const runLighthouse = require('./lib/run_lighthouse')
-const metricsFromResult = require('./lib/metrics_from_result')
-const statistics = require('./lib/statistics')
+const benchmark = require('./index')
 const printSummary = require('./lib/print_summary')
 
 const optionDefinitions = [
@@ -34,28 +32,12 @@ const run = async () => {
 
   console.log('Number of requests per url:', requests)
 
-  const summary = {}
-  // eslint-disable-next-line no-restricted-syntax
-  for await (const url of urls) {
-    console.log('Processing url:', url)
-    const urlMetrics = []
-
-    try {
-      for (let n = 0; n < requests; n++) {
-        const res = await runLighthouse(url)
-        const metrics = metricsFromResult(res)
-        urlMetrics.push(metrics)
-      }
-
-      const urlStatistics = statistics(urlMetrics)
-
-      summary[url] = urlStatistics
-    } catch (e) {
-      console.log(e.friendlyMessage || e.toString())
-    }
+  try {
+    const summary = await benchmark(urls, requests, true)
+    printSummary(summary)
+  } catch (e) {
+    console.log(e.friendlyMessage || e.toString())
   }
-
-  printSummary(summary)
 }
 
 run()
