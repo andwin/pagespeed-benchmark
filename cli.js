@@ -2,7 +2,7 @@
 const commandLineArgs = require('command-line-args')
 
 const printUsage = require('./lib/print_usage')
-const statisticsForUrl = require('.')
+const pagespeedBenchmark = require('.')
 const printSummary = require('./lib/print_summary')
 
 const optionDefinitions = [
@@ -38,7 +38,7 @@ const run = async () => {
     for await (const url of urls) {
       console.log('Processing url:', url)
 
-      const urlStatistics = await statisticsForUrl(url, requests, true)
+      const urlStatistics = await pagespeedBenchmark(url, requests, true)
       summary[url] = urlStatistics
     }
 

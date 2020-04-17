@@ -2,7 +2,7 @@ const runLighthouse = require('./lib/run_lighthouse')
 const metricsFromResult = require('./lib/metrics_from_result')
 const statistics = require('./lib/statistics')
 
-const statisticsForUrl = async (url, requestsPerUrl) => {
+const pagespeedBenchmark = async (url, requestsPerUrl) => {
   const urlMetrics = []
 
   for (let n = 0; n < requestsPerUrl; n++) {
@@ -16,4 +16,4 @@ const statisticsForUrl = async (url, requestsPerUrl) => {
   return urlStatistics
 }
 
-module.exports = statisticsForUrl
+module.exports = pagespeedBenchmark
