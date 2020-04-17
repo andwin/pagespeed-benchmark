@@ -2,7 +2,7 @@
 const commandLineArgs = require('command-line-args')
 
 const printUsage = require('./lib/print_usage')
-const benchmark = require('./index')
+const statisticsForUrl = require('.')
 const printSummary = require('./lib/print_summary')
 
 const optionDefinitions = [
@@ -33,7 +33,15 @@ const run = async () => {
   console.log('Number of requests per url:', requests)
 
   try {
-    const summary = await benchmark(urls, requests, true)
+    const summary = {}
+    // eslint-disable-next-line no-restricted-syntax
+    for await (const url of urls) {
+      console.log('Processing url:', url)
+
+      const urlStatistics = await statisticsForUrl(url, requests, true)
+      summary[url] = urlStatistics
+    }
+
     printSummary(summary)
   } catch (e) {
     console.log(e.friendlyMessage || e.toString())
