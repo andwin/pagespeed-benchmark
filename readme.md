@@ -6,11 +6,11 @@ Lighthouse benchmark is a tool to run [Lighthouse](https://github.com/GoogleChro
 When trying to improve your pagespeed score you might want to check to see the result of your changes. Lighthouse is a very good tool for that, but the [variability](https://developers.google.com/web/tools/lighthouse/variability) in the result means you have to run the tool several times and use the median values to exclude extremes.
 
 ## Run without installing using npx
-´´´
+```
 npx pagespeed-benchmark https://www.github.com/ -n5
-´´´
+```
 
-This will download the latest version of this tool every time you run it. Including a 100+ Mb chromium browser.
+This will download the latest version of this tool every time you run it. Including a 100+ MB chromium browser.
 
 ## Installing locally
 ```
