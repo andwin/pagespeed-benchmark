@@ -29,7 +29,7 @@
     "command-line-args": "^5.1.1",
     "easy-table": "^1.1.1",
     "lighthouse": "^5.6.0",
-    "puppeteer": "^2.1.1"
+    "puppeteer": "^5.3.1"
   },
   "devDependencies": {
     "@andwin/eslint-config": "0.0.5",
