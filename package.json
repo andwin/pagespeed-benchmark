@@ -28,8 +28,8 @@
   "dependencies": {
     "command-line-args": "^5.1.1",
     "easy-table": "^1.1.1",
-    "lighthouse": "^6.4.1",
-    "puppeteer": "^5.3.1"
+    "lighthouse": "^7.1.0",
+    "puppeteer": "^7.1.0"
   },
   "devDependencies": {
     "@andwin/eslint-config": "^0.0.6",
