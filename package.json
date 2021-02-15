@@ -1,13 +1,13 @@
 {
   "name": "pagespeed-benchmark",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "main": "./index.js",
   "scripts": {
     "test": "eslint . && jest"
   },
   "bin": {
-    "pagespeed-benchmark": "./cli.js"
+    "pagespeed-benchmark": "cli.js"
   },
   "repository": {
     "type": "git",
