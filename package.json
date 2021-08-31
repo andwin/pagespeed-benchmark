@@ -32,7 +32,7 @@
     "puppeteer": "^7.1.0"
   },
   "devDependencies": {
-    "@andwin/eslint-config": "^0.0.6",
+    "@andwin/eslint-config": "^0.0.9",
     "jest": "^27.0.4"
   }
 }
