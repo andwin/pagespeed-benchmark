@@ -6,7 +6,7 @@ When trying to improve your pagespeed score you might want to check to see the r
 
 ## Run without installing using npx
 ```
-npx pagespeed-benchmark https://www.github.com/ -n5
+npx pagespeed-benchmark https://www.github.com/ -n 5
 ```
 
 This will download the latest version of this tool every time you run it. Including a 100+ MB chromium browser.
@@ -15,7 +15,7 @@ This will download the latest version of this tool every time you run it. Includ
 ```
 npm i -g pagespeed-benchmark
 
-pagespeed-benchmark https://www.github.com/ -n5
+pagespeed-benchmark https://www.github.com/ -n 5
 ```
 
 ## Output
