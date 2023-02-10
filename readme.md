@@ -56,7 +56,7 @@ pwa                          48       48      48      48
 First install the package
 
 ```
-npm i -g pagespeed-benchmark
+npm i pagespeed-benchmark
 ```
 
 And then something like this in your code
