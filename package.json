@@ -33,6 +33,6 @@
   },
   "devDependencies": {
     "@andwin/eslint-config": "^0.0.14",
-    "jest": "^29.4.2"
+    "jest": "^29.6.4"
   }
 }
